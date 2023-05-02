@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>D15 - Javascript</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- ! web favicon -->
+    <link
+      rel="shortcut icon"
+      href="https://picsum.photos/200"
+      type="image/x-icon"
+    />
+
+    <!-- ! Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+
+    <!-- ! font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- ! CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body class="py-5">
+    <!-- ! Bai tap 1 -->
+    <section class="ex1">
+      <form class="card w-75 mx-auto mb-5">
+        <div class="card-header text-light bg-primary fs-3">
+          BT1 - Quản lý tuyển sinh
+        </div>
+        <div class="card-body">
+          <!-- * row 1 -->
+          <div class="row">
+            <!-- todo: điểm chuẩn -->
+            <div class="col-lg-4 mb-3">
+              <label for="passScore" class="form-label">Điểm chuẩn</label>
+              <input
+                type="number"
+                class="form-control"
+                id="passScore"
+                min="0"
+                max="30"
+                placeholder="0 - 30"
+              />
+            </div>
+            <!-- todo: chọn khu vực -->
+            <div class="col-md-6 col-lg-4 mb-3">
+              <label for="area" class="form-label">Khu vực</label>
+              <select
+                class="form-select"
+                aria-label="Default select example"
+                id="area"
+              >
+                <option value="0" selected disabled>Chọn khu vực</option>
+                <option value="2">A</option>
+                <option value="1">B</option>
+                <option value="0.5">C</option>
+              </select>
+            </div>
+            <!-- todo: chọn đối tượng -->
+            <div class="col-md-6 col-lg-4 mb-3">
+              <label for="object" class="form-label">Đối tượng</label>
+              <select
+                class="form-select"
+                aria-label="Default select example"
+                id="object"
+              >
+                <option value="0" selected disabled>Chọn đối tượng</option>
+                <option value="2.5">1</option>
+                <option value="1.5">2</option>
+                <option value="1">3</option>
+              </select>
+            </div>
+          </div>
+          <!-- * row 2 -->
+          <div class="row my-3">
+            <!-- todo: điểm môn thứ 1 -->
+            <div class="col-lg-4 mb-3">
+              <label for="subject1" class="form-label">Điểm môn thứ nhất</label>
+              <input
+                type="number"
+                class="form-control"
+                id="subject1"
+                min="0"
+                max="10"
+                placeholder="0 - 10"
+              />
+            </div>
+            <!-- todo: điểm môn thứ 2 -->
+            <div class="col-lg-4 mb-3">
+              <label for="subject2" class="form-label">Điểm môn thứ hai</label>
+              <input
+                type="number"
+                class="form-control"
+                id="subject2"
+                min="0"
+                max="10"
+                placeholder="0 - 10"
+              />
+            </div>
+            <!-- todo: điểm môn thứ 3 -->
+            <div class="col-lg-4 mb-3">
+              <label for="subject3" class="form-label">Điểm môn thứ ba</label>
+              <input
+                type="number"
+                class="form-control"
+                id="subject3"
+                min="0"
+                max="10"
+                placeholder="0 - 10"
+              />
+            </div>
+          </div>
+          <!-- todo: btn -->
+          <div class="mb-3 float-end">
+            <button type="button" class="btn btn-success rounded-5 shadow">
+              Calculate
+            </button>
+          </div>
+        </div>
+        <div id="footer_ex1" class="card-footer text-dark bg-light py-4">
+          <h5 class="d-inline fs-4 me-3">Tổng điểm:</h5>
+          <span class="fw-bold fs-4"></span>
+        </div>
+      </form>
+    </section>
+
+    <!-- ! Bai tap 2 -->
+    <section class="ex2">
+      <form class="card w-75 mx-auto mb-5">
+        <div class="card-header text-light bg-primary fs-3">
+          BT2 - Tính tiền điện
+        </div>
+        <div class="card-body">
+          <!-- todo: họ tên -->
+          <div class="mb-3">
+            <label for="fullName" class="form-label">Họ tên</label>
+            <input
+              type="text"
+              class="form-control"
+              id="fullName"
+              placeholder="Nhập họ và tên của bạn..."
+            />
+          </div>
+          <!-- todo: số kW -->
+          <div class="mb-3">
+            <label for="kW" class="form-label">Số kW</label>
+            <input
+              type="number"
+              class="form-control"
+              id="kW"
+              placeholder="Nhập số kW bạn đã dùng..."
+              min="1"
+            />
+          </div>
+          <!-- todo: btn -->
+          <div class="mb-3 float-end">
+            <button type="button" class="btn btn-success rounded-5 shadow">
+              Submit
+            </button>
+          </div>
+        </div>
+        <div id="footer_ex2" class="card-footer text-dark bg-light py-4">
+          <h5 class="d-inline fs-4 me-3">Họ tên:</h5>
+          <span class="fw-bold fs-4 text-success"></span>
+          <br /><br />
+          <h5 class="d-inline fs-4 me-3">Tiền điện:</h5>
+          <span class="fw-bold fs-4 text-success"></span>
+        </div>
+      </form>
+    </section>
+
+    <!-- ! Bai tap 3 -->
+    <section class="ex3">
+      <form class="card w-75 mx-auto mb-5">
+        <div class="card-header text-light bg-primary fs-3">
+          BT3 - Tính thuế thu nhập cá nhân
+        </div>
+        <div class="card-body">
+          <!-- todo: họ tên -->
+          <div class="mb-3">
+            <label for="username" class="form-label">Họ tên</label>
+            <input
+              type="text"
+              class="form-control"
+              id="username"
+              placeholder="Nhập họ và tên của bạn..."
+            />
+          </div>
+          <!-- todo: tổng thu nhập năm -->
+          <div class="mb-3">
+            <label for="salaryPerYear" class="form-label"
+              >Tổng nhu nhập năm</label
+            >
+            <input
+              type="number"
+              class="form-control"
+              id="salaryPerYear"
+              placeholder="> 12,000,000 VND"
+              min="12000000"
+              step="500000"
+            />
+          </div>
+          <!-- todo: số người phụ thuộc -->
+          <div class="mb-3">
+            <label for="dependence" class="form-label"
+              >Số người phụ thuộc</label
+            >
+            <input
+              type="number"
+              class="form-control"
+              id="dependence"
+              placeholder="Nhập số người phụ thuộc..."
+              min="0"
+            />
+          </div>
+          <!-- todo: btn -->
+          <div class="mb-3 float-end">
+            <button type="button" class="btn btn-success rounded-5 shadow">
+              Calculate
+            </button>
+          </div>
+        </div>
+        <div id="footer_ex3" class="card-footer text-dark bg-light py-4">
+          <h5 class="d-inline fs-4 me-3">Họ tên:</h5>
+          <span class="fw-bold fs-4 text-success"></span>
+          <br /><br />
+          <h5 class="d-inline fs-4 me-3">Tiền thuế thu nhập cá nhân:</h5>
+          <span class="fw-bold fs-4 text-success"></span>
+        </div>
+      </form>
+    </section>
+
+    <!-- ! Bai tap 4 -->
+    <section class="ex4">
+      <form class="card w-75 mx-auto mb-5">
+        <div class="card-header text-light bg-primary fs-3">
+          BT4 - Tính tiền cáp
+        </div>
+        <div class="card-body">
+          <!-- todo: mã khách hàng -->
+          <div class="mb-3">
+            <label for="code" class="form-label">Mã khách hàng</label>
+            <input
+              type="text"
+              class="form-control"
+              id="code"
+              placeholder="Nhập mã khách hàng..."
+            />
+          </div>
+          <!-- todo: kiểu khách hàng -->
+          <div class="mb-3">
+            <label for="type" class="form-label">Chọn kiểu khách hàng</label>
+            <select
+              class="form-select"
+              aria-label="Default select example"
+              id="type"
+            >
+              <option value="home">Nhà Dân</option>
+              <option value="business">Doanh Nghiệp</option>
+            </select>
+          </div>
+          <!-- todo: số kết nối - số kênh cao cấp -->
+          <div class="row">
+            <!-- todo: số kết nối -->
+            <div id="connectionContainer" class="mb-3 col-md-6 d-none">
+              <label for="connection" class="form-label">Số kết nối</label>
+              <input
+                type="number"
+                class="form-control"
+                id="connection"
+                placeholder="Nhập số kết nối..."
+                min="0"
+              />
+            </div>
+            <!-- todo: số kênh cao cấp -->
+            <div class="mb-3 col-md-6">
+              <label for="channel" class="form-label">Số kênh cao cấp</label>
+              <input
+                type="number"
+                class="form-control"
+                id="channel"
+                placeholder="Nhập số kênh..."
+                min="0"
+              />
+            </div>
+          </div>
+          <!-- todo: btn -->
+          <div class="mb-3 float-end">
+            <button type="button" class="btn btn-success rounded-5 shadow">
+              Calculate
+            </button>
+          </div>
+        </div>
+        <div id="footer_ex4" class="card-footer text-dark bg-light py-4">
+          <h5 class="d-inline fs-4 me-3">Mã khách hàng:</h5>
+          <span class="fw-bold fs-4 text-success"></span>
+          <br /><br />
+          <h5 class="d-inline fs-4 me-3">Tiền cáp:</h5>
+          <span class="fw-bold fs-4 text-success"></span>
+        </div>
+      </form>
+    </section>
+
+    <!-- ! Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- ! JS -->
+    <script src="./js/script.js"></script>
+  </body>
+</html>
